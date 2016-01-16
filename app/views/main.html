@@ -1,0 +1,15 @@
+<h1>Symbaloo TicTacToe</h1>
+<div class="container">
+  <div class="new_button">
+    <button class="btn btn-success" ng-click="init()">New game</button>
+  </div>
+  <div class="board">
+    <div ng-repeat="row in board">
+      <button ng-class="cell.value" type="button" class="btn btn-lg" ng-repeat="cell in row" ng-class="cell.value" ng-click="click_cell(cell)" name="button" ng-disabled="cell.value!='·'">{{cell.value}}</button>
+    </div>
+    <div class="message">
+      <h2>{{winnerMessage}}</h2>
+      <h2>{{turnMessage}}{{currentPlayer}}</h2>
+    </div>
+  </div>
+</div>
